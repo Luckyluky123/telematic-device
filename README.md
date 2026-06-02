@@ -23,7 +23,7 @@ Reads OBD-II parameters from a vehicle via ESP32 and streams data to GCP over MQ
 <img width="995" height="697" alt="schemat_ideowy" src="https://github.com/user-attachments/assets/cac07ad2-c1e5-49fa-b3d5-375df546dcf0" />
 
 
-## 💻 Software Stac
+## 💻 Software Stack
 
 ### Firmware (C/C++, ESP-IDF 5.2)
 - **FreeRTOS**
@@ -31,4 +31,18 @@ Reads OBD-II parameters from a vehicle via ESP32 and streams data to GCP over MQ
   - CAN (ISO 11898-1) via TWAI
   - WiFi via ESP-IDF stack
   - MQTT via Paho library
-  - UART (NMEA) via driver
+  - UART 
+ - **Core Modules:**
+  - `obd_manager.c` — OBD-II PID acquisition and parsing
+  - `gps_manager.c` — GPS data acquisition
+  - `driving_score.c` — Driving behavior analysis and scoring
+  - `data_manager.c` — FSM and data orchestration
+  - `flash_storage.c` — Offline buffering
+  - `mqtt_manager.c` — Cloud communication and message publishing
+### Backend (Python 3.8+)
+```
+paho-mqtt           # MQTT client
+pandas              # Data manipulation
+pyarrow             # Parquet serialization
+google-cloud-*      # GCP APIs
+```
