@@ -21,3 +21,14 @@ Reads OBD-II parameters from a vehicle via ESP32 and streams data to GCP over MQ
 
 ### Wiring diagram
 <img width="995" height="697" alt="schemat_ideowy" src="https://github.com/user-attachments/assets/cac07ad2-c1e5-49fa-b3d5-375df546dcf0" />
+
+
+## 💻 Software Stac
+
+### Firmware (C/C++, ESP-IDF 5.2)
+- **FreeRTOS**
+- **Protocols:**
+  - CAN (ISO 11898-1) via TWAI
+  - WiFi via ESP-IDF stack
+  - MQTT via Paho library
+  - UART (NMEA) via driver
