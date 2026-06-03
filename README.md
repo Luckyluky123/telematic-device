@@ -1,6 +1,6 @@
 # Car Telemetry IoT System
 Reads OBD-II parameters from a vehicle via ESP32 and streams data to GCP over MQTT.
-![C](https://img.shields.io/badge/C%2FC%2B%2B-Embedded-blue?style=flat-square&logo=cplusplus)
+![C](https://img.shields.io/badge/Language-C-blue?style=flat-square&logo=c)
 ![Platform](https://img.shields.io/badge/Espressif-ESP--IDF_v5.2-orange?style=flat-square&logo=espressif)
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)
 ![GCP](https://img.shields.io/badge/GCP-Cloud_Infrastructure-green?style=flat-square&logo=google-cloud)
