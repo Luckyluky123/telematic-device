@@ -12,7 +12,7 @@ from datetime import datetime, timezone
 # GCP Project Details
 GCP_PROJECT_ID = "your_project_id"
 BQ_DATASET = "your_dataset"
-BQ_TABLE = "your_tablet"
+BQ_TABLE = "your_table"
 GCS_BUCKET_NAME = "your_bucket_name"
 
 CREDENTIALS_PATH = "credentials to key"
