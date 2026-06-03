@@ -33,7 +33,7 @@ Reads OBD-II parameters from a vehicle via ESP32 and streams data to GCP over MQ
   - WiFi via ESP-IDF stack
   - MQTT via Paho library
   - UART 
- - **Core Modules:**
+  **Core Modules:**
   - `obd_manager.c` — OBD-II PID acquisition and parsing
   - `gps_manager.c` — GPS data acquisition
   - `driving_score.c` — Driving behavior analysis and scoring
@@ -64,3 +64,32 @@ Launch the interactive configuration menu to tweak the SDK properties:
 idf.py menuconfig
 ```
 Navigate through the configuration menus and apply the following parameters:
+- **Partition Table** -> `Custom partition table CSV`
+- **Bluetooth:**
+ - Toggle: `Enable`
+ - Set Host to: `NimBLE - BLE only` to enable provisioning
+
+##  Build and Flash
+```bash
+# Build the project binaries
+idf.py build
+
+# Flash the binary and open the serial data monitor
+# (Replace /dev/ttyUSB0 with your specific COM port if on Windows/macOS)
+idf.py -p /dev/ttyUSB0 flash monitor
+```
+If there are problems with build try:
+```bash
+idf.py fullclean
+idf.py build
+or
+idf.py --no-cache build
+```
+
+## ☁️ Cloud Infrastructure Deployment
+### 🇬🇨🇵 Google Cloud Platform Setup
+Provision the following cloud-native resources within your active GCP account layout:
+- Cloud Storage bucket
+- Bigquery dataset and table
+- Compute Engine VM
+Install MQTT broker on the virtual machine, deploy the Python ETL script, and run it as a system daemon. Update credentials in the script accordingly.
