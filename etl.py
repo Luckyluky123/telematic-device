@@ -10,18 +10,18 @@ from datetime import datetime, timezone
 
 # --- CONFIGURATION ---
 # GCP Project Details
-GCP_PROJECT_ID = "esp-s3-cloud"
-BQ_DATASET = "iot_dataset"
-BQ_TABLE = "table_iot"
-GCS_BUCKET_NAME = "telematics_data_lake"
+GCP_PROJECT_ID = "your_project_id"
+BQ_DATASET = "your_dataset"
+BQ_TABLE = "your_tablet"
+GCS_BUCKET_NAME = "your_bucket_name"
 
-CREDENTIALS_PATH = "/root/esp32-s3-cloud-a401c4c97c39.json"
+CREDENTIALS_PATH = "credentials to key"
 
 # MQTT Configuration
 MQTT_BROKER = "localhost"
 MQTT_PORT = 1883
-MQTT_USER = "python_etl"
-MQTT_PASS = "backend321"
+MQTT_USER = "your_user"
+MQTT_PASS = "your_password"
 
 # Topics to subscribe to
 MQTT_TOPICS = [("esp32/telemetry", 1), ("esp32/gps", 1)]
