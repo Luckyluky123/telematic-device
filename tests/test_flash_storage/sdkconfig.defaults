@@ -1,0 +1,6 @@
+# Ten plik mówi ESP-IDF żeby użył naszej własnej tabeli partycji
+# zamiast domyślnej.
+# ESP-IDF czyta go automatycznie przy pierwszym "idf.py build"
+CONFIG_PARTITION_TABLE_CUSTOM=y
+CONFIG_PARTITION_TABLE_CUSTOM_FILENAME="partitions.csv"
+CONFIG_PARTITION_TABLE_OFFSET=0x8000
