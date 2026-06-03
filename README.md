@@ -92,4 +92,5 @@ Provision the following cloud-native resources within your active GCP account la
 - Cloud Storage bucket
 - Bigquery dataset and table
 - Compute Engine VM
+
 Install MQTT broker on the virtual machine, deploy the Python ETL script, and run it as a system daemon. Update credentials in the script accordingly.
