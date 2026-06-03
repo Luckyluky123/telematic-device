@@ -13,11 +13,11 @@ Reads OBD-II parameters from a vehicle via ESP32 and streams data to GCP over MQ
 
 | Element | Model | Function |
 |---------|-------|---------|
-| Microcontroler | ESP32-S3 | Processing | Dual-core, WiFi, 520KB RAM |
+| Microcontroller | ESP32-S3 | Processing | Dual-core, WiFi, 520KB RAM |
 | Transceiver CAN | TJA1051T/3 | Signal conversion | ISO 11898-2 |
 | GPS module | ATGM336H | Localization + UTC |
 | Voltage Regulator | Pololu S8V9F3 | 12V → 3.3V | 
-| Protection | TVS + Fuse 500mA + Capactiors | Device Protection | Automotive standard |
+| Protection | TVS + Fuse 500mA + Capacitors | Device Protection | Automotive standard |
 
 
 ### Wiring diagram
