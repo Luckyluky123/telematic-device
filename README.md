@@ -1,9 +1,10 @@
 # Car Telemetry IoT System
 Reads OBD-II parameters from a vehicle via ESP32 and streams data to GCP over MQTT.
-![C](https://img.shields.io/badge/C-embedded-blue)
-![Platform](https://img.shields.io/badge/Espressif-orange)
-
-
+![C/C++](https://img.shields.io/badge/C%2FC%2B%2B-Embedded-blue?style=flat-square&logo=cplusplus)
+![Platform](https://img.shields.io/badge/Espressif-ESP--IDF_v5.2-orange?style=flat-square&logo=espressif)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=flat-square&logo=python)
+![GCP](https://img.shields.io/badge/GCP-Cloud_Infrastructure-green?style=flat-square&logo=google-cloud)
+![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square)
 ### System Architecture
 <img width="1774" height="1037" alt="architecture" src="https://github.com/user-attachments/assets/52d3cd31-2179-4727-94a4-535ac480d773" />
 
@@ -46,3 +47,20 @@ pandas              # Data manipulation
 pyarrow             # Parquet serialization
 google-cloud-*      # GCP APIs
 ```
+## 🛠️ Firmware Installation
+### Prerequisites
+- Visual Studio Code
+- ESP-IDF Extension (V5.2+)
+
+### Clone repo
+```bash
+git clone <repository_url>
+cd vehicle-telemetry/firmware
+```
+
+## ⚙️ Configuration
+Launch the interactive configuration menu to tweak the SDK properties:
+```bash
+idf.py menuconfig
+```
+Navigate through the configuration menus and apply the following parameters:
